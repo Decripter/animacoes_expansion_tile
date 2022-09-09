@@ -156,20 +156,22 @@ class _MyExpansionTileWidgetState extends State<MyExpansionTileWidget>
           ),
         ),
       ),
-      Container(
-        decoration: BoxDecoration(
-          border: Border(
-            top: BorderSide(color: borderColorAnimation.value!),
-            bottom: BorderSide(color: borderColorAnimation.value!),
+      ClipRect(
+        child: Container(
+          decoration: BoxDecoration(
+            border: Border(
+              top: BorderSide(color: borderColorAnimation.value!),
+              bottom: BorderSide(color: borderColorAnimation.value!),
+            ),
           ),
+          child: Align(
+              alignment: Alignment.bottomCenter,
+              heightFactor: childHeightFatorAnimation.value,
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: widget.children,
+              )),
         ),
-        child: Align(
-            alignment: Alignment.topCenter,
-            heightFactor: childHeightFatorAnimation.value,
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: widget.children,
-            )),
       ),
     ]);
   }
