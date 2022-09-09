@@ -13,8 +13,24 @@ class MyExpansionTileWidget extends StatefulWidget {
   State<MyExpansionTileWidget> createState() => _MyExpansionTileWidgetState();
 }
 
-class _MyExpansionTileWidgetState extends State<MyExpansionTileWidget> {
+class _MyExpansionTileWidgetState extends State<MyExpansionTileWidget>
+    with TickerProviderStateMixin {
+  //
+  late final AnimationController controller;
+
   MyExpansionTileState state = MyExpansionTileState.retracted();
+
+  @override
+  void initState() {
+    super.initState();
+    controller = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 1000),
+    );
+    controller.addListener(() {
+      setState(() {});
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
