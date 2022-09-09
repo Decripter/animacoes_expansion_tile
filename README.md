@@ -1,16 +1,25 @@
 # animacoes_implicitas_expansion_tile
+# Animações Implicitas vs Controladas
 
-A new Flutter project.
+## Check each branch to see its code
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+<table>
+<tr>
+<th> <a href="https://github.com/Decripter/animacoes_expansion_tile/tree/implicitas"> animacoes_implicitas_fab</a> </th>
+<th> <a href="https://github.com/Decripter/animacoes_expansion_tile/tree/controladas"> animacoes_controladas_fab</a> </th>
+</tr>
+<tr>
+<td>
+<img src="implicitas.gif" >
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+</td>
+<td>
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<img src="controladas.gif" >
+
+
+</td>
+</tr>
+</table>
