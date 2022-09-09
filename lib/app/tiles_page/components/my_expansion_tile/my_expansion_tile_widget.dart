@@ -167,6 +167,7 @@ class _MyExpansionTileWidgetState extends State<MyExpansionTileWidget>
             alignment: Alignment.topCenter,
             heightFactor: childHeightFatorAnimation.value,
             child: Column(
+              mainAxisSize: MainAxisSize.min,
               children: widget.children,
             )),
       ),
