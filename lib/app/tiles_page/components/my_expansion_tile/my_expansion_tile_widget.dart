@@ -93,8 +93,8 @@ class _MyExpansionTileWidgetState extends State<MyExpansionTileWidget>
 
     //child height
     childHeightFatorAnimation = Tween<double>(
-      begin: MyExpansionTileState.retracted().iconRotation,
-      end: MyExpansionTileState.expanded().iconRotation,
+      begin: MyExpansionTileState.retracted().childHeightFactor,
+      end: MyExpansionTileState.expanded().childHeightFactor,
     ).animate(
       CurvedAnimation(
         parent: controller,
@@ -168,7 +168,6 @@ class _MyExpansionTileWidgetState extends State<MyExpansionTileWidget>
               alignment: Alignment.bottomCenter,
               heightFactor: childHeightFatorAnimation.value,
               child: Column(
-                mainAxisSize: MainAxisSize.min,
                 children: widget.children,
               )),
         ),
