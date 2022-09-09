@@ -1,7 +1,7 @@
 # animacoes_implicitas_expansion_tile
 
 A new Flutter project.
-
+<img src="controladas.gif">
 ## Getting Started
 
 This project is a starting point for a Flutter application.
