@@ -1,4 +1,3 @@
-# animacoes_implicitas_expansion_tile
 # Animações Implicitas vs Controladas
 
 ## Check each branch to see its code
