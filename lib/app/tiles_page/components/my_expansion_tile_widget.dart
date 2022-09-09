@@ -18,44 +18,45 @@ class _MyExpansionTileWidgetState extends State<MyExpansionTileWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        Container(
-          decoration: BoxDecoration(
-              border: Border(
-            top: BorderSide(
-                color:
-                    state.isExpanded ? Colors.grey[300]! : Colors.transparent),
-            bottom: BorderSide(
-                color:
-                    state.isExpanded ? Colors.grey[300]! : Colors.transparent),
-          )),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              // ignore: prefer_const_constructors
-              Padding(
-                padding: const EdgeInsets.only(top: 50.0),
-              ),
-              AnimatedAlign(
-                  duration: const Duration(milliseconds: 220),
-                  alignment: Alignment.bottomCenter,
-                  heightFactor: state.isExpanded ? 1 : 0,
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: widget.children,
-                  ))
-            ],
+    return ClipRect(
+      child: Stack(
+        children: [
+          Container(
+            decoration: BoxDecoration(
+                border: Border(
+              top: BorderSide(
+                  color: state.isExpanded
+                      ? Colors.grey[300]!
+                      : Colors.transparent),
+              bottom: BorderSide(
+                  color: state.isExpanded
+                      ? Colors.grey[300]!
+                      : Colors.transparent),
+            )),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                // ignore: prefer_const_constructors
+                Padding(
+                  padding: const EdgeInsets.only(top: 50.0),
+                ),
+                AnimatedAlign(
+                    duration: const Duration(milliseconds: 220),
+                    alignment: Alignment.bottomCenter,
+                    heightFactor: state.isExpanded ? 1 : 0,
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: widget.children,
+                    ))
+              ],
+            ),
           ),
-        ),
-        Container(
-          color: Colors.white,
-          child: Padding(
-            padding: const EdgeInsets.all(14.0),
-            child: GestureDetector(
-              onTap: openCloseTile,
-              child: Container(
-                color: Colors.white,
+          Container(
+            color: Colors.white,
+            child: Padding(
+              padding: const EdgeInsets.all(14.0),
+              child: GestureDetector(
+                onTap: openCloseTile,
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -81,8 +82,8 @@ class _MyExpansionTileWidgetState extends State<MyExpansionTileWidget> {
               ),
             ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 
