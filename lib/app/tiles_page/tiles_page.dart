@@ -18,13 +18,17 @@ class _TilesPageState extends State<TilesPage> {
       body: SingleChildScrollView(
         child: Column(
           children: const [
-            MyExpansionTileWidget(title: 'MyExpansionTiles', children: [
-              FlutterLogo(
-                size: 80,
-              ),
-              Text(
-                  'Mussum Ipsum, cacilds vidis litro abertis. Sapien in monti palavris qui num significa nadis i pareci latim.Nullam volutpat risus nec leo commodo, ut interdum diam laoreet. Sed non consequat odio.Per aumento de cachacis, eu reclamis.Mé faiz elementum girarzis, nisi eros vermeio.'),
-            ]),
+            MyExpansionTileWidget(
+                title: Text(
+                  'MyExpansionTile',
+                ),
+                children: [
+                  FlutterLogo(
+                    size: 80,
+                  ),
+                  Text(
+                      'Mussum Ipsum, cacilds vidis litro abertis. Sapien in monti palavris qui num significa nadis i pareci latim.Nullam volutpat risus nec leo commodo, ut interdum diam laoreet. Sed non consequat odio.Per aumento de cachacis, eu reclamis.Mé faiz elementum girarzis, nisi eros vermeio.'),
+                ]),
             ExpansionTile(
                 title: Text(
                   'MyExpansionTile',

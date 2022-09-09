@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class MyExpansionTileWidget extends StatefulWidget {
-  final String title;
+  final Widget title;
   final List<Widget> children;
   const MyExpansionTileWidget({
     super.key,
@@ -66,9 +66,7 @@ class _MyExpansionTileWidgetState extends State<MyExpansionTileWidget> {
                         color: state.titleColor,
                       ),
                       duration: const Duration(milliseconds: 400),
-                      child: Text(
-                        widget.title,
-                      ),
+                      child: widget.title,
                     ),
                     AnimatedRotation(
                       duration: const Duration(milliseconds: 200),
