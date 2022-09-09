@@ -129,25 +129,28 @@ class _MyExpansionTileWidgetState extends State<MyExpansionTileWidget>
         padding: const EdgeInsets.all(14.0),
         child: GestureDetector(
           onTap: openCloseTile,
-          child: Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                DefaultTextStyle(
-                  style: TextStyle(
-                    fontSize: 16,
-                    color: textColorAnimation.value,
+          child: Container(
+            color: Colors.transparent,
+            child: Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  DefaultTextStyle(
+                    style: TextStyle(
+                      fontSize: 16,
+                      color: textColorAnimation.value,
+                    ),
+                    child: widget.title,
                   ),
-                  child: widget.title,
-                ),
-                RotationTransition(
-                  turns: iconRotationAnimation,
-                  child: Icon(
-                    Icons.keyboard_arrow_down,
-                    color: iconColorAnimation.value,
+                  RotationTransition(
+                    turns: iconRotationAnimation,
+                    child: Icon(
+                      Icons.keyboard_arrow_down,
+                      color: iconColorAnimation.value,
+                    ),
                   ),
-                ),
-              ]),
+                ]),
+          ),
         ),
       ),
       ClipRect(
