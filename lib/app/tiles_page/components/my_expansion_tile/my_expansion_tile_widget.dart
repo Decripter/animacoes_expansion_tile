@@ -125,35 +125,29 @@ class _MyExpansionTileWidgetState extends State<MyExpansionTileWidget>
   @override
   Widget build(BuildContext context) {
     return Column(children: [
-      Container(
-        color: Colors.white,
-        child: Padding(
-          padding: const EdgeInsets.all(14.0),
-          child: GestureDetector(
-            onTap: openCloseTile,
-            child: Container(
-              color: Colors.white,
-              child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    DefaultTextStyle(
-                      style: TextStyle(
-                        fontSize: 16,
-                        color: textColorAnimation.value,
-                      ),
-                      child: widget.title,
-                    ),
-                    RotationTransition(
-                      turns: iconRotationAnimation,
-                      child: Icon(
-                        Icons.keyboard_arrow_down,
-                        color: iconColorAnimation.value,
-                      ),
-                    ),
-                  ]),
-            ),
-          ),
+      Padding(
+        padding: const EdgeInsets.all(14.0),
+        child: GestureDetector(
+          onTap: openCloseTile,
+          child: Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                DefaultTextStyle(
+                  style: TextStyle(
+                    fontSize: 16,
+                    color: textColorAnimation.value,
+                  ),
+                  child: widget.title,
+                ),
+                RotationTransition(
+                  turns: iconRotationAnimation,
+                  child: Icon(
+                    Icons.keyboard_arrow_down,
+                    color: iconColorAnimation.value,
+                  ),
+                ),
+              ]),
         ),
       ),
       ClipRect(
