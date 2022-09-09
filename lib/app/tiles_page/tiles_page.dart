@@ -23,9 +23,9 @@ class _TilesPageState extends State<TilesPage> {
                   'MyExpansionTile',
                 ),
                 children: [
-                  FlutterLogo(
-                    size: 80,
-                  ),
+                  FlutterLogo(size: 80),
+                  FlutterLogo(size: 80),
+                  FlutterLogo(size: 80),
                   Text(
                       'Mussum Ipsum, cacilds vidis litro abertis. Sapien in monti palavris qui num significa nadis i pareci latim.Nullam volutpat risus nec leo commodo, ut interdum diam laoreet. Sed non consequat odio.Per aumento de cachacis, eu reclamis.Mé faiz elementum girarzis, nisi eros vermeio.'),
                 ]),
