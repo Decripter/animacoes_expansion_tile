@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'components/my_expansion_tile_widget.dart';
+import 'components/my_expansion_tile/my_expansion_tile_widget.dart';
 
 class TilesPage extends StatefulWidget {
   const TilesPage({Key? key}) : super(key: key);
